@@ -1,9 +1,15 @@
 extends Node # instancia a classe Node2D
-
-var status = 0
+# o comando status altera como o jogo abre. Se o status é = 0, o jogo começa no início e é 
+# necessário apertar o enter para começar a jogar, já se é =1 o jogo já começa iniciado.
+var status = 1
+# o comando vscore determina com quantos pontos o jogo inicia, portanto se for = 5, na primeira
+# vez que o jogador acertar irá registrar na tela 6 pontos
 var vscore = 0
+# O comando x determina a velocidade em que o dragão anda em direção ao eixo x (esquerda e direita)
+# enquanto o comando y determina a velocidade em com que o dragão anda em direção ao eixo y (cima e
+# baixo).
 var x = 5
-var y = 5 
+var y = 5
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -75,4 +81,7 @@ func _on_columns_body_shape_exited(body_id, body, body_shape, local_shape):
 		vscore += 1 # aumenta o score
 		$score.set_text(str(vscore)) # atualiza o painel
 		
-
+# o comando status altera como o jogo abre. Se o status é = 0, o jogo começa no início e é 
+# necessário apertar o enter para começar a jogar, já se é =1 o jogo já começa iniciado.
+# o comando vscore determina com quantos pontos o jogo inicia, portanto se for = 5, na primeira
+# vez que o
