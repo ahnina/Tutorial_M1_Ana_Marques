@@ -1,5 +1,5 @@
 extends Node # instancia a classe Node2D
-# o comando status altera como o jogo abre. Se o status é = 0, o jogo começa no início e é 
+# o comando status altera como o jogo abre. Se o status é = 0, o jogo abre no fim, no "gameover" e é 
 # necessário apertar o enter para começar a jogar, já se é =1 o jogo já começa iniciado.
 var status = 1
 # o comando vscore determina com quantos pontos o jogo inicia, portanto se for = 5, na primeira
@@ -7,9 +7,9 @@ var status = 1
 var vscore = 0
 # O comando x determina a velocidade em que o dragão anda em direção ao eixo x (esquerda e direita)
 # enquanto o comando y determina a velocidade em com que o dragão anda em direção ao eixo y (cima e
-# baixo).
+# baixo), dando o efeito de gravidade.
 var x = 5
-var y = 5
+var y = 1.5
 
 # executa essa função ao carregar o jogo
 func _ready():
