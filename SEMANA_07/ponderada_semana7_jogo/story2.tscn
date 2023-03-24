@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Free/Background/Gray.png" type="Texture" id=1]
+[ext_resource path="res://storyjogo.2.png" type="Texture" id=2]
+[ext_resource path="res://story2.gd" type="Script" id=3]
+
+[node name="story2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+self_modulate = Color( 1, 1, 1, 0.956863 )
+position = Vector2( 260, 304 )
+scale = Vector2( 8.125, 9.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2"]
+self_modulate = Color( 1, 1, 1, 0.956863 )
+position = Vector2( 780, 304 )
+scale = Vector2( 8.125, 9.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="continuar" type="Button" parent="."]
+margin_left = 392.0
+margin_top = 344.0
+margin_right = 600.0
+margin_bottom = 416.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 504, 256 )
+scale = Vector2( 0.780992, 0.824873 )
+texture = ExtResource( 2 )
+
+[connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

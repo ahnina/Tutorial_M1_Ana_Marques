@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://story.inicial.jogo.png" type="Texture" id=1]
+[ext_resource path="res://story.gd" type="Script" id=2]
+[ext_resource path="res://Free/Background/Blue.png" type="Texture" id=3]
+
+[node name="story" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="voltar" type="Button" parent="."]
+margin_left = 409.0
+margin_top = 372.0
+margin_right = 632.0
+margin_bottom = 445.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 261, 300 )
+scale = Vector2( 8.03125, 9.34375 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2"]
+position = Vector2( 772, 300 )
+scale = Vector2( 7.96875, 9.34375 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 497, 275 )
+scale = Vector2( 0.857438, 0.855753 )
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
